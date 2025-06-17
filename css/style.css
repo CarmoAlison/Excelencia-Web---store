@@ -841,6 +841,13 @@
             .footer-container {
                 grid-template-columns: 1fr;
             }
+            .logo{
+                font-size: 20px;
+            }
+
+            .section-title{
+                display: block;
+            }
         }
 
         @media (max-width: 480px) {
