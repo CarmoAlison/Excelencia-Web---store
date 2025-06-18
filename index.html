@@ -33,6 +33,7 @@
         </div>
     </header>
 
+
     <!-- Conteúdo Principal -->
     <div class="main-container">
         <!-- Sidebar -->
@@ -55,7 +56,20 @@
         <main class="main-content">
             <div class="section-title">
                 <h2>Produtos em Destaque</h2>
-    
+                <div class="filter-options">
+                    <select id="sort-by">
+                        <option>Ordenar por</option>
+                        <option>Menor Preço</option>
+                        <option>Maior Preço</option>
+                        <option>Mais Vendidos</option>
+                    </select>
+                    <select id="filter-category">
+                        <option>Todas Categorias</option>
+                        <option>Tecnologia</option>
+                        <option>Livros</option>
+                        <option>Vestuário</option>
+                    </select>
+                </div>
             </div>
 
             <!-- Grid de Produtos -->
@@ -90,8 +104,36 @@
         </div>
     </div>
 
+    <!-- Modal de Detalhes do Produto -->
+    <div class="modal" id="product-detail-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Detalhes do Produto</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="product-detail-image">
+                    <img id="detail-img" src="" alt="Produto">
+                </div>
+                <div class="product-detail-info">
+                    <div class="product-detail-category" id="detail-category">Categoria</div>
+                    <h2 class="product-detail-name" id="detail-name">Nome do Produto</h2>
+                    <div class="product-detail-price" id="detail-price">R$ 0,00</div>
+                    <p class="product-detail-description" id="detail-description">
+                        Descrição detalhada do produto.
+                    </p>
+                    <div class="detail-actions">
+                        <button class="btn-add-to-cart" id="add-to-cart-from-detail">
+                            <i class="fas fa-cart-plus"></i> Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal de Finalização de Pedido -->
-    <div class="modal" id="checkout-modal">
+    <div class="modal checkout-modal" id="checkout-modal">
         <div class="modal-content">
             <div class="modal-header">
                 <h2>Finalizar Pedido</h2>
@@ -159,11 +201,11 @@
         </div>
     </div>
 
-        <!-- Footer -->
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-col">
-                <h3>ExcelênciaWeb Store</h3>
+                <h3>Fanex Store</h3>
                 <p>Sua loja online de confiança com os melhores produtos e preços competitivos. Qualidade e satisfação garantida.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
